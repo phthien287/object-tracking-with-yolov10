@@ -121,39 +121,35 @@ jtop
 
 - Clone the repository
 ```
-git clone https://github.com/levanhoailinh/object-tracking-withy-yolov9-and-deepSORT.git
+git clone https://github.com/phthien287/object-tracking-with-yolov9.git
 ```
 - Goto the cloned folder.
 ```
-cd object-tracking-withy-yolov9-and-deepSORT
+cd object-tracking-with-yolov9
 ```
 - Install requirements with mentioned command below.
 ```
 pip install -r requirements.txt
 ```
-- Download the pre-trained YOLOv9 model weights
-[yolov9](https://github.com/WongKinYiu/yolov9/releases/download/v0.1/yolov9-c.pt)
-
-
 - Run code
 ```
 #for detection and tracking
-python3 detect_dual_tracking.py --weights 'yolov9-c.pt' --source 'your video.mp4' --device 0
+python3 detect_dual_tracking.py --weights 'weights/yolov9c.pt' --source 'your video.mp4' --device 0
 
 #for WebCam
-python3 detect_dual_tracking.py --weights 'yolov9-c.pt' --source 0 --device 0
+python3 detect_dual_tracking.py --weights 'weights/yolov9c.pt' --source 0 --device 0
 
 #for External Camera
-python3 detect_dual_tracking.py --weights 'yolov9-c.pt' --source 1 --device 0
+python3 detect_dual_tracking.py --weights 'weights/yolov9c.pt' --source 1 --device 0
 
 #For LiveStream (Ip Stream URL Format i.e "rtsp://username:pass@ipaddress:portno/video/video.amp")
-python3 detect_dual_tracking.py --weights 'yolov9-c.pt' --source "your IP Camera Stream URL" --device 0
+python3 detect_dual_tracking.py --weights 'weights/yolov9c.pt' --source "your IP Camera Stream URL" --device 0
 
 #for specific class (person)
-python3 detect_dual_tracking.py --weights 'yolov9-c.pt' --source 'your video.mp4' --device 0 --classes 0
+python3 detect_dual_tracking.py --weights 'weights/yolov9c.pt' --source 'your video.mp4' --device 0 --classes 0
 
 #for detection and tracking with trails 
-!python3 detect_dual_tracking.py --weights 'yolov9-c.pt' --source 'your video.mp4' --device 0 --draw-trails 
+!python3 detect_dual_tracking.py --weights 'weights/yolov9c.pt' --source 'your video.mp4' --device 0 --draw-trails 
 ```
 
 - Output file will be created in the ```working-dir/runs/detect/obj-tracking``` with original filename
