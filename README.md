@@ -83,7 +83,7 @@ sudo apt-get update
 #open python3 shell
 python3
 import cv2
-cv2._version_
+cv2.__version__
 ```
 - Install Pytorch for Jetson: https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
 ```
@@ -134,25 +134,25 @@ pip install -r requirements.txt
 - Run code
 ```
 #for detection and tracking
-python3 detect_dual_tracking.py --weights 'weights/yolov9c.pt' --source 'your video.mp4' --device 0
+python3 detect_dual_tracking.py --weights 'weights/yolov9-c.pt' --source 'your video.mp4' --device 0
 
 #for WebCam
-python3 detect_dual_tracking.py --weights 'weights/yolov9c.pt' --source 0 --device 0
+python3 detect_dual_tracking.py --weights 'weights/yolov9-c.pt' --source 0 --device 0
 
 #for External Camera
-python3 detect_dual_tracking.py --weights 'weights/yolov9c.pt' --source 1 --device 0
+python3 detect_dual_tracking.py --weights 'weights/yolov9-c.pt' --source 1 --device 0
 
 #For LiveStream (Ip Stream URL Format i.e "rtsp://username:pass@ipaddress:portno/video/video.amp")
-python3 detect_dual_tracking.py --weights 'weights/yolov9c.pt' --source "your IP Camera Stream URL" --device 0
+python3 detect_dual_tracking.py --weights 'weights/yolov9-c.pt' --source "your IP Camera Stream URL" --device 0
 
 #for specific class (person)
-python3 detect_dual_tracking.py --weights 'weights/yolov9c.pt' --source 'your video.mp4' --device 0 --classes 0
+python3 detect_dual_tracking.py --weights 'weights/yolov9-c.pt' --source 'your video.mp4' --device 0 --classes 0
 
 #for detection and tracking with trails 
-!python3 detect_dual_tracking.py --weights 'weights/yolov9c.pt' --source 'your video.mp4' --device 0 --draw-trails 
+!python3 detect_dual_tracking.py --weights 'weights/yolov9-c.pt' --source 'your video.mp4' --device 0 --draw-trails 
 ```
 
-- Output file will be created in the ```working-dir/runs/detect/obj-tracking``` with original filename
+- Output file will be created in the ```working-dir/output``` with original filename
 
 ### IV. Results
-![alt text](PersonTracking.png)
+![alt text](highway.gif)
